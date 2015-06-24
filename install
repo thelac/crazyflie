@@ -1,0 +1,15 @@
+#!/bin/env bash
+
+# https://github.com/bitcraze/crazyflie-clients-python/archive/2014.12.3.tar.gz
+
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+brew install python
+echo 'export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH' >> ~/.bashrc
+source ~/.bashrc
+
+brew install sdl sdl_image sdl_mixer sdl_ttf portmidi sdl2 pyqt libusb mercurial
+
+pip install hg+http://bitbucket.org/pygame/pygame
+pip install pyusb
+pip install pysdl2
+pip install pyqtgraph
